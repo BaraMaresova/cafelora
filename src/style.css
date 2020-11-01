@@ -240,6 +240,8 @@ nav a:hover {
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
+
+  position: relative;
 }
 
 .contacts {
@@ -255,6 +257,14 @@ nav a:hover {
 .contacts__map {
   max-width: 90%;
   height: auto;
+}
+
+.img-popisek {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  padding: 10px 25px;
+  background-color: rgba(48, 26, 26, 0.7);
 }
 
 @media screen and (min-width: 768px) {
@@ -296,7 +306,7 @@ nav a:hover {
     text-align: center;
   }
 
-  .nav-btn{
+  .nav-btn {
     display: none;
   }
 }
