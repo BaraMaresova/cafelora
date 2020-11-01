@@ -1,5 +1,6 @@
 import './index.html';
 import './style.css';
+import {Layer} from "./Layer";
 
 console.log('funguju!');
 
@@ -34,3 +35,43 @@ const toggleButton = () => {
 };
 
 orderbtn.addEventListener('click', toggleButton);
+
+const drinkInfo = document.querySelector('.drink__info');
+const ingredients = [
+  { color: '#feeeca', label: 'mléčná pěna' },
+  { color: '#fed7b0', label: 'teplé mléko' },
+  { color: '#613916', label: 'espresso' },
+];
+
+const filledLayer = (props) => {
+  let result = '';
+  for (let i = 0; i < props.ingredients.length; i++) {
+    result += Layer(props.ingredients[i]);
+  }
+  return result;
+};
+
+drinkInfo.innerHTML += filledLayer({ingredients:ingredients});
+
+/* `<div
+                    class="layer__color"
+                    style="background-color: #feeeca"
+                  ></div>
+                  <div class="layer__label">mléčná pěna</div>
+                </div>
+                <div class="layer">
+                  <div
+                    class="layer__color"
+                    style="background-color: #fed7b0"
+                  ></div>
+                  <div class="layer__label">teplé mléko</div>
+                </div>
+
+                <div class="layer">
+                  <div
+                    class="layer__color"
+                    style="background-color: #613916"
+                  ></div>
+                  <div class="layer__label">espresso</div>
+                </div>
+              </div>` */
