@@ -5,7 +5,7 @@ const drinkInfo = document.querySelector('.drink__info');
 
 export const Drink = (props) => {
   const drinky = document.createElement('div');
-  drinky.className = 'drinky';
+  drinky.className = 'drink';
 
   drinky.innerHTML = `
   <div class="drink__product">
